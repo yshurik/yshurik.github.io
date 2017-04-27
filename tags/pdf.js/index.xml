@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on YSHURIK</title>
-    <link>https://yshurik.github.io/post/</link>
-    <description>Recent content in Posts on YSHURIK</description>
+    <title>Pdf.Js on YSHURIK</title>
+    <link>https://yshurik.github.io/tags/pdf.js/</link>
+    <description>Recent content in Pdf.Js on YSHURIK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Apr 2017 20:05:44 +0200</lastBuildDate>
     
-	<atom:link href="https://yshurik.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yshurik.github.io/tags/pdf.js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>https://yshurik.github.io/post/create-qpdfjs/</guid>
       <description>Authors: Oleksandr Iakovliev &amp;lt;yshurik@gmail.com&amp;gt;, Shawn Gordon&amp;lt;smga3000@gmail.com&amp;gt;
 Recently we had a client come to use that had a unique request. They wanted to programmatically read a PDF file, find a barcode contained in it, read the barcode and get the value it represented and then rename the file to match the value contained in the bar code. Scanning a physical barcode and getting the value is childs play, but reading it out of a file like this was tricky business, and one we weren’t sure we could pull off for a reasonable time and cost at first glance.</description>
-    </item>
-    
-    <item>
-      <title>Init</title>
-      <link>https://yshurik.github.io/post/init/</link>
-      <pubDate>Wed, 12 Apr 2017 17:49:36 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/post/init/</guid>
-      <description>Hugo init post</description>
     </item>
     
   </channel>
