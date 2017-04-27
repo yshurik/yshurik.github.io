@@ -80,17 +80,18 @@ setCentralWidget(m_webView);
 
 <p>This will present a window that contains a webpage inside. Now let´s have a look at PDF.js. The project is quite large and presents a heavy footprint, but there is an option to build a <em>minfied</em> version that can easily be included into other websites. Here is how we retrieved and built it:</p>
 
-<p>$ git clone git://github.com/mozilla/pdf.js.git</p>
+<pre><code>$ git clone git://github.com/mozilla/pdf.js.git
 
-<p>$ cd pdf.js</p>
+$ cd pdf.js
 
-<p>$ brew install npm</p>
+$ brew install npm
 
-<p>$ npm install -g gulp-cli</p>
+$ npm install -g gulp-cli
 
-<p>$ npm install</p>
+$ npm install
 
-<p>$ gulp minified</p>
+$ gulp minified
+</code></pre>
 
 <p>The result is a &ldquo;compiled&rdquo; version of pdf.js in the folder <em>build/minified</em>, then we copy it to our project folder. Now set the url to point to the local file <em>minified/web/viewer.html</em></p>
 
@@ -105,7 +106,6 @@ setCentralWidget(m_webView);
 <pre><code>auto url = QUrl::fromLocalFile(app_path+&quot;/minified/web/viewer.html&quot;);
 
 m_communicator = new Communicator(this);
-
 m_communicator-&gt;setUrl(pdf_path);
 
 m_webView = new QWebEngineView(this);
