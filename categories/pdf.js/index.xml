@@ -17,8 +17,9 @@
       <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
       
       <guid>https://yshurik.github.io/post/create-qpdfjs/</guid>
-      <description>Authors: Oleksandr Iakovliev &amp;lt;yshurik@gmail.com&amp;gt;, Shawn Gordon&amp;lt;smga3000@gmail.com&amp;gt;
-Recently we had a client come to use that had a unique request. They wanted to programmatically read a PDF file, find a barcode contained in it, read the barcode and get the value it represented and then rename the file to match the value contained in the bar code. Scanning a physical barcode and getting the value is childs play, but reading it out of a file like this was tricky business, and one we weren’t sure we could pull off for a reasonable time and cost at first glance.</description>
+      <description>Today I would like to show the power of Qt technology. The framework was born more than a decade ago but still due to a lot of efforts from talented developers and Qt community keep us surprising.
+I would like to show an example of developing an application with very small efforts and have it on the intersection of desktop application programming and the web programming.
+Few weeks ago I was looking for approach to convert an pdf document to a image with consideration of having it in batch mode in future.</description>
     </item>
     
   </channel>
