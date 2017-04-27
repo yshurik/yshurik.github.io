@@ -45,7 +45,7 @@
     <ul class="sidebar-nav">
       <li><a href="/">Home</a> </li>
       
-        <li><a href="/post/create-qpdfjs/"> Power of Qt: Making a PDF viewer desktop application in a few hours with QWebEngine and PDF.js </a></li>
+        <li><a href="/post/create-qpdfjs/"> Create QPdfJs </a></li>
       
     </ul>
 
@@ -61,7 +61,7 @@
   <div class="post">
     <h1 class="post-title">
       <a href="https://yshurik.github.io/post/create-qpdfjs/">
-        Power of Qt: Making a PDF viewer desktop application in a few hours with QWebEngine and PDF.js
+        Create QPdfJs
       </a>
     </h1>
 
@@ -108,7 +108,7 @@ setCentralWidget(m_webView);
 
 <p>Now build &amp; run:</p>
 
-<p><img src="image_0.png" alt="image alt text" /></p>
+<p><img src="/img/image_0.png" alt="image alt text" /></p>
 
 <p>This worked perfectly right out of the box, so our concept is valid, however it is showing their example PDF file, how do we bypass the filename and inject our own into the javascript engine? There is another clever bit of Qt technology called QWebChannel. The idea is that on C++/Qt side we instantiate <em>QWebChannel</em> object and set this channel to a webpage. With that channel we can register objects that can be accessed from a JavaScript scope:</p>
 
@@ -164,7 +164,7 @@ setCentralWidget(m_webView);
 
 <p>Now we copy the <em>minified</em> to our project home. From here we can make changes like allowing the application to accept command line arguments, or profile a list of available PDF files that you want to process, whatever it is you need. This formed the core of our project for the client because we could now deal with the information inside the PDF much easier.</p>
 
-<p><img src="image_1.png" alt="image alt text" /></p>
+<p><img src="/img/image_1.png" alt="image alt text" /></p>
 
 <p>And there you have it, a completed PDF viewer desktop application just in few hours (not counting research).</p>
 
