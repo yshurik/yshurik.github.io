@@ -112,7 +112,7 @@ m_webView-&gt;load(url);
 setCentralWidget(m_webView);
 </code></pre>
 
-<p>The above code allows us to access the communicator object from JavaScript. Now we need to make some changes to <em>viewer.html/viewer.js</em> and add *qwebchannel.js *to allow communication on other side, but that is simple enough:</p>
+<p>The above code allows us to access the communicator object from JavaScript. Now we need to make some changes to <em>viewer.html/viewer.js</em> and add <em>qwebchannel.js</em> to allow communication on other side, but that is simple enough:</p>
 
 <ol>
 <li>For <em>viewer.html</em> just add a reference to <em>qwebchannel.js</em></li>
@@ -121,7 +121,7 @@ setCentralWidget(m_webView);
 <script src="qwebchannel.js"></script>
 
 <ol>
-<li><p>For <em>viewer.js</em> add the initialization of *QWebChannel *and bypass the filename just below the definition of the original url pointing to that example pdf file:</p>
+<li><p>For <em>viewer.js</em> add the initialization of <em>QWebChannel</em> and bypass the filename just below the definition of the original url pointing to that example pdf file:</p>
 
 <p>var DEFAULT_URL = &lsquo;compressed.tracemonkey-pldi-09.pdf&rsquo;;
 new QWebChannel(qt.webChannelTransport
@@ -131,9 +131,9 @@ new QWebChannel(qt.webChannelTransport
 &hellip;</p></li>
 </ol>
 
-<p>Here is the secret sauce in how this all works. Before page loading, we attach a web channel and register the *communicator *object. Then when viewer.html is loaded for the first time, we have a defined *QWebChannel *JS class. Just after the declaration of DEFAULT_URL we create JS QWebChannel and once it is instantiated and communication is established, an attached function is called which reads the <strong>url</strong> from <em>communicator</em> object. This **url **is used instead of the example pdf file.</p>
+<p>Here is the secret sauce in how this all works. Before page loading, we attach a web channel and register the <em>communicator</em> object. Then when viewer.html is loaded for the first time, we have a defined <em>QWebChannel</em> JS class. Just after the declaration of DEFAULT_URL we create JS <em>QWebChannel</em> and once it is instantiated and communication is established, an attached function is called which reads the <strong>url</strong> from <em>communicator</em> object. This <strong>url</strong> is used instead of the example pdf file.</p>
 
-<p>When the PDF.js code changes are done, just rebuild the *minified *version:</p>
+<p>When the PDF.js code changes are done, just rebuild the <em>minified</em> version:</p>
 
 <pre><code>$ gulp minified
 </code></pre>
