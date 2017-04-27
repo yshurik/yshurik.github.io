@@ -72,30 +72,24 @@
 <p>Based on the <em>QMainWindow</em> class:</p>
 
 <pre><code>m_webView = new QWebEngineView(this);
-
 m_webView-&gt;load(url);
-
 setCentralWidget(m_webView);
 </code></pre>
 
 <p>This will present a window that contains a webpage inside. Now let´s have a look at PDF.js. The project is quite large and presents a heavy footprint, but there is an option to build a <em>minfied</em> version that can easily be included into other websites. Here is how we retrieved and built it:</p>
 
 <pre><code>$ git clone git://github.com/mozilla/pdf.js.git
-
 $ cd pdf.js
-
 $ brew install npm
-
 $ npm install -g gulp-cli
-
 $ npm install
-
 $ gulp minified
 </code></pre>
 
 <p>The result is a &ldquo;compiled&rdquo; version of pdf.js in the folder <em>build/minified</em>, then we copy it to our project folder. Now set the url to point to the local file <em>minified/web/viewer.html</em></p>
 
-<p>auto url = QUrl::fromLocalFile(app_path+&ldquo;/minified/web/viewer.html&rdquo;);</p>
+<pre><code>auto url = QUrl::fromLocalFile(app_path+&quot;/minified/web/viewer.html&quot;);
+</code></pre>
 
 <p>Now build &amp; run:</p>
 
@@ -111,11 +105,8 @@ m_communicator-&gt;setUrl(pdf_path);
 m_webView = new QWebEngineView(this);
 
 QWebChannel * channel = new QWebChannel(this);
-
 channel-&gt;registerObject(QStringLiteral(&quot;communicator&quot;), m_communicator);
-
 m_webView-&gt;page()-&gt;setWebChannel(channel);
-
 m_webView-&gt;load(url);
 
 setCentralWidget(m_webView);
@@ -130,27 +121,22 @@ setCentralWidget(m_webView);
 <script src="qwebchannel.js"></script>
 
 <ol>
-<li>For <em>viewer.js</em> add the initialization of *QWebChannel *and bypass the filename just below the definition of the original url pointing to that example pdf file:</li>
-</ol>
+<li><p>For <em>viewer.js</em> add the initialization of *QWebChannel *and bypass the filename just below the definition of the original url pointing to that example pdf file:</p>
 
-<p>var DEFAULT_URL = &lsquo;compressed.tracemonkey-pldi-09.pdf&rsquo;;</p>
-
-<p>new QWebChannel(qt.webChannelTransport</p>
-
-<pre><code>   ,function(channel) {
-
+<p>var DEFAULT_URL = &lsquo;compressed.tracemonkey-pldi-09.pdf&rsquo;;
+new QWebChannel(qt.webChannelTransport
+       ,function(channel) {
            var comm = channel.objects.communicator;
-
            DEFAULT_URL = comm.url;
-</code></pre>
-
-<p>&hellip;.</p>
+&hellip;</p></li>
+</ol>
 
 <p>Here is the secret sauce in how this all works. Before page loading, we attach a web channel and register the *communicator *object. Then when viewer.html is loaded for the first time, we have a defined *QWebChannel *JS class. Just after the declaration of DEFAULT_URL we create JS QWebChannel and once it is instantiated and communication is established, an attached function is called which reads the <strong>url</strong> from <em>communicator</em> object. This **url **is used instead of the example pdf file.</p>
 
 <p>When the PDF.js code changes are done, just rebuild the *minified *version:</p>
 
-<p>$ gulp minified</p>
+<pre><code>$ gulp minified
+</code></pre>
 
 <p>Now we copy the <em>minified</em> to our project home. From here we can make changes like allowing the application to accept command line arguments, or profile a list of available PDF files that you want to process, whatever it is you need. This formed the core of our project for the client because we could now deal with the information inside the PDF much easier.</p>
 
