@@ -67,119 +67,14 @@
 
     <span class="post-date">Thu, Apr 27, 2017</span>
 
-    <p>Authors:    Oleksandr Iakovliev &lt;<a href="mailto:yshurik@gmail.com">yshurik@gmail.com</a>&gt;, Shawn Gordon&lt;<a href="mailto:smga3000@gmail.com">smga3000@gmail.com</a>&gt;</p>
-
-<p>Recently we had a client come to use that had a unique request. They wanted to programmatically read a PDF file, find a barcode contained in it, read the barcode and get the value it represented and then rename the file to match the value contained in the bar code. Scanning a physical barcode and getting the value is childs play, but reading it out of a file like this was tricky business, and one we weren’t sure we could pull off for a reasonable time and cost at first glance.</p>
-
-<p>We’ve been working with the <a href="http://www.qt.io">Qt </a>technology framework since the year 2000, and it is our natural ‘go to’ for any project to see if it can solve our problem. At its heart it is a multi-platform windowing toolkit for C++, but over the years there have been many modules added that extend beyond just the presentation layer and with bindings to other languages. It is mature with a robust community that keeps surprising us with the solutions they come up with. What we want to do with this article is show an example of developing a complex application with minimal effort, that is combining elements of both desktop application programming and web programming.</p>
-
-<p>Our application needed to work in batch mode, it was going to be setup in the Windows scheduler and process a directory of files whenever it ran. We built all the normal stuff into it to deal with missing directories, flexible paths, duplicate files and such, but that was simple, it was reading the PDF file and finding/interpreting the barcode that was our challenge.</p>
-
-<p>Initially we looked at the ImageMagic conversion utility, but it flat didn’t do what we needed it to do. We looked around and found a lot of tools, but all of them were missing one thing or another, like batch mode or the license was a problem. Since a ready made solution wasn’t at hand, we decided to see what we could homebrew.</p>
-
-<p>Since Qt was a mature technology and it is trivial to create a PDF document with the QPrinter functionality, we wondered if there was a reverse the process and turn the PDF into an image file. Remembering PDF.js as another piece of mature software that does PDF rendering, we wondered if there was a way to merge these technologies to get to our solution. After some tinkering, we found the Qt component <em>QWebEngineView</em> that solves our problem. Let’s take a look at how the code works:</p>
-
-<p></p>
-
-<p>Based on the <em>QMainWindow</em> class<em>:</em></p>
-
-<pre><code>m_webView = new QWebEngineView(this);
-
-m_webView-&gt;load(url);
-
-setCentralWidget(m_webView);
-</code></pre>
-
-<p>This will present a window that contains a webpage inside. Now let´s have a look at PDF.js. The project is quite large and presents a heavy footprint, but there is an option to build a <em>minfied</em> version that can easily be included into other websites. Here is how we retrieved and built it:</p>
-
-<p>$ git clone git://github.com/mozilla/pdf.js.git</p>
-
-<p>$ cd pdf.js</p>
-
-<p>$ brew install npm</p>
-
-<p>$ npm install -g gulp-cli</p>
-
-<p>$ npm install</p>
-
-<p>$ gulp minified</p>
-
-<p>The result is a &ldquo;compiled&rdquo; version of pdf.js in the folder <em>build/minified</em>, then we copy it to our project folder. Now set the url to point to the local file <em>minified/web/viewer.html</em></p>
-
-<p>auto url = QUrl::fromLocalFile(app_path+&ldquo;/minified/web/viewer.html&rdquo;);</p>
-
-<p>Now build &amp; run:</p>
-
-<p><img src="/img/image_0.png" alt="image alt text" /></p>
-
-<p>This worked perfectly right out of the box, so our concept is valid, however it is showing their example PDF file, how do we bypass the filename and inject our own into the javascript engine? There is another clever bit of Qt technology called QWebChannel. The idea is that on C++/Qt side we instantiate <em>QWebChannel</em> object and set this channel to a webpage. With that channel we can register objects that can be accessed from a JavaScript scope:</p>
-
-<pre><code>auto url = QUrl::fromLocalFile(app_path+&quot;/minified/web/viewer.html&quot;);
-
-m_communicator = new Communicator(this);
-
-m_communicator-&gt;setUrl(pdf_path);
-
-m_webView = new QWebEngineView(this);
-
-QWebChannel * channel = new QWebChannel(this);
-
-channel-&gt;registerObject(QStringLiteral(&quot;communicator&quot;), m_communicator);
-
-m_webView-&gt;page()-&gt;setWebChannel(channel);
-
-m_webView-&gt;load(url);
-
-setCentralWidget(m_webView);
-</code></pre>
-
-<p>The above code allows us to access the communicator object from JavaScript. Now we need to make some changes to <em>viewer.html/viewer.js</em> and add *qwebchannel.js *to allow communication on other side, but that is simple enough:</p>
-
-<ol>
-<li>For <em>viewer.html</em> we just add a reference to <em>qwebchannel.js</em></li>
-</ol>
-
-<script src="qwebchannel.js"></script>
-
-<ol>
-<li>For <em>viewer.js</em> we add the initialization of *QWebChannel *and bypass the filename just below the definition of the original url pointing to that example pdf file:</li>
-</ol>
-
-<p>var DEFAULT_URL = &lsquo;compressed.tracemonkey-pldi-09.pdf&rsquo;;</p>
-
-<p>new QWebChannel(qt.webChannelTransport</p>
-
-<pre><code>   ,function(channel) {
-
-           var comm = channel.objects.communicator;
-
-           DEFAULT_URL = comm.url;
-</code></pre>
-
-<p>&hellip;.</p>
-
-<p>Here is the secret sauce in how this all works. Before page loading, we attach a web channel and register the *communicator *object. Then when viewer.html is loaded for the first time, we have a defined *QWebChannel *JS class. Just after the declaration of DEFAULT_URL we create JS QWebChannel and once it is instantiated and communication is established, an attached function is called which reads the <strong>url</strong> from <em>communicator</em> object. This **url **is used instead of the example pdf file.</p>
-
-<p>When the PDF.js code changes are done, just rebuild the *minified *version:</p>
-
-<p>$ gulp minified</p>
-
-<p>Now we copy the <em>minified</em> to our project home. From here we can make changes like allowing the application to accept command line arguments, or profile a list of available PDF files that you want to process, whatever it is you need. This formed the core of our project for the client because we could now deal with the information inside the PDF much easier.</p>
-
-<p><img src="/img/image_1.png" alt="image alt text" /></p>
-
-<p>And there you have it, a completed PDF viewer desktop application just in few hours (not counting research).</p>
-
-<p>Project github: <a href="https://github.com/yshurik/qpdfjs">https://github.com/yshurik/qpdfjs</a></p>
-
-<p><strong>Bio:</strong></p>
-
-<p><strong>Oleksandr Iakovliev</strong> is a full-stack developer, long time Qt enthusiast for, leading developer at Petrostreamz.com and former developer at theKompany. Living in Norway and coding under Aurora. Prefers to follow &ldquo;The Right Thing&rdquo; and &ldquo;KISS&rdquo; principles.</p>
-
-<p>github: <a href="https://github.com/yshurik">https://github.com/yshurik</a></p>
-
-<p>linkedin: <a href="http://www.linkedin.com/in/olelev">http://www.linkedin.com/in/olelev</a></p>
+    Authors: Oleksandr Iakovliev &lt;yshurik@gmail.com&gt;, Shawn Gordon&lt;smga3000@gmail.com&gt;
+Recently we had a client come to use that had a unique request. They wanted to programmatically read a PDF file, find a barcode contained in it, read the barcode and get the value it represented and then rename the file to match the value contained in the bar code. Scanning a physical barcode and getting the value is childs play, but reading it out of a file like this was tricky business, and one we weren’t sure we could pull off for a reasonable time and cost at first glance.
   </div>
+    
+    <div class="read-more-link">
+      <a href="/post/create-qpdfjs/">Read More…</a>
+    </div>
+    
   
   <div class="post">
     <h1 class="post-title">
@@ -190,9 +85,9 @@ setCentralWidget(m_webView);
 
     <span class="post-date">Wed, Apr 12, 2017</span>
 
-    <p>Hugo init post</p>
-
+    Hugo init post
   </div>
+    
   
 </div>
 </div>
