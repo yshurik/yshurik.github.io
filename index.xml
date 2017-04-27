@@ -17,8 +17,19 @@
       <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
       
       <guid>https://yshurik.github.io/post/create-qpdfjs/</guid>
-      <description>Authors: Oleksandr Iakovliev &amp;lt;yshurik@gmail.com&amp;gt;, Shawn Gordon&amp;lt;smga3000@gmail.com&amp;gt;
-Recently we had a client come to use that had a unique request. They wanted to programmatically read a PDF file, find a barcode contained in it, read the barcode and get the value it represented and then rename the file to match the value contained in the bar code. Scanning a physical barcode and getting the value is childs play, but reading it out of a file like this was tricky business, and one we weren’t sure we could pull off for a reasonable time and cost at first glance.</description>
+      <description>&lt;p&gt;Authors:    Oleksandr Iakovliev &amp;lt;&lt;a href=&#34;mailto:yshurik@gmail.com&#34;&gt;yshurik@gmail.com&lt;/a&gt;&amp;gt;, Shawn Gordon&amp;lt;&lt;a href=&#34;mailto:smga3000@gmail.com&#34;&gt;smga3000@gmail.com&lt;/a&gt;&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Recently we had a client come to use that had a unique request. They wanted to programmatically read a PDF file, find a barcode contained in it, read the barcode and get the value it represented and then rename the file to match the value contained in the bar code. Scanning a physical barcode and getting the value is childs play, but reading it out of a file like this was tricky business, and one we weren’t sure we could pull off for a reasonable time and cost at first glance.&lt;/p&gt;
+
+&lt;p&gt;We’ve been working with the &lt;a href=&#34;http://www.qt.io&#34;&gt;Qt &lt;/a&gt;technology framework since the year 2000, and it is our natural ‘go to’ for any project to see if it can solve our problem. At its heart it is a multi-platform windowing toolkit for C++, but over the years there have been many modules added that extend beyond just the presentation layer and with bindings to other languages. It is mature with a robust community that keeps surprising us with the solutions they come up with. What we want to do with this article is show an example of developing a complex application with minimal effort, that is combining elements of both desktop application programming and web programming.&lt;/p&gt;
+
+&lt;p&gt;Our application needed to work in batch mode, it was going to be setup in the Windows scheduler and process a directory of files whenever it ran. We built all the normal stuff into it to deal with missing directories, flexible paths, duplicate files and such, but that was simple, it was reading the PDF file and finding/interpreting the barcode that was our challenge.&lt;/p&gt;
+
+&lt;p&gt;Initially we looked at the ImageMagic conversion utility, but it flat didn’t do what we needed it to do. We looked around and found a lot of tools, but all of them were missing one thing or another, like batch mode or the license was a problem. Since a ready made solution wasn’t at hand, we decided to see what we could homebrew.&lt;/p&gt;
+
+&lt;p&gt;Since Qt was a mature technology and it is trivial to create a PDF document with the QPrinter functionality, we wondered if there was a reverse the process and turn the PDF into an image file. Remembering PDF.js as another piece of mature software that does PDF rendering, we wondered if there was a way to merge these technologies to get to our solution. After some tinkering, we found the Qt component &lt;em&gt;QWebEngineView&lt;/em&gt; that solves our problem. Let’s take a look at how the code works:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
