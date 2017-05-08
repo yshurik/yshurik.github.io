@@ -12,6 +12,17 @@
   </url>
   
   <url>
+    <loc>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</loc>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yshurik.github.io/tags/blog/</loc>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yshurik.github.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -25,6 +36,18 @@
   <url>
     <loc>https://yshurik.github.io/categories/development/</loc>
     <lastmod>2017-04-27T20:05:44+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yshurik.github.io/tags/ideas/</loc>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yshurik.github.io/tags/misc/</loc>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -59,8 +82,26 @@
   </url>
   
   <url>
+    <loc>https://yshurik.github.io/tags/research/</loc>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yshurik.github.io/categories/sql/</loc>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yshurik.github.io/tags/sqlite/</loc>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yshurik.github.io/tags/</loc>
-    <lastmod>2017-04-27T20:05:44+02:00</lastmod>
+    <lastmod>2016-06-03T22:13:05+02:00</lastmod>
     <priority>0</priority>
   </url>
   
