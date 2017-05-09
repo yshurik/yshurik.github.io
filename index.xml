@@ -23,15 +23,6 @@ Few weeks ago I was looking for approach to convert an pdf document to a image w
     </item>
     
     <item>
-      <title>Init</title>
-      <link>https://yshurik.github.io/post/init/</link>
-      <pubDate>Wed, 12 Apr 2017 17:49:36 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/post/init/</guid>
-      <description>Hugo init post</description>
-    </item>
-    
-    <item>
       <title>SQLite tree structures and queries to get sub-trees</title>
       <link>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</link>
       <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>

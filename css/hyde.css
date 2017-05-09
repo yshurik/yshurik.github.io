@@ -121,8 +121,8 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
-  padding-bottom: 4rem;
+  padding-top:    2rem;
+  padding-bottom: 2rem;
 }
 
 @media (min-width: 48em) {
@@ -241,9 +241,25 @@ a.sidebar-nav-item:focus {
 
 /* Brown */
 .theme-base-0f .sidebar {
-  background-color: #8f5536;
+  background-color: #303441;
 }
+/*
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+*/
+
+
+
+// misc
+
+.brand {
+  font-size: 4.0em;
+  margin-bottom: 0;
+}
+
+.read-more-link {
+  float: right;
+}
+
