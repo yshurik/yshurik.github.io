@@ -37,9 +37,10 @@ Few weeks ago I was looking for approach to convert an pdf document to a image w
       <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
       
       <guid>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</guid>
-      <description>SQLite is wonderful!
-Just today I found that SQLite support queries with a recurse to get the inner sub-trees:
-CREATE TABLE els ( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE ,pid INTEGER DEFAULT NULL REFERENCES els ,name TEXT ); INSERT INTO els (id, pid, name) VALUES (1, NULL, &#39;top&#39;); INSERT INTO els (id, pid, name) VALUES (2, 1, &#39;x2&#39;); INSERT INTO els (id, pid, name) VALUES (3, 1, &#39;x1&#39;); INSERT INTO els (id, pid, name) VALUES (4, 3, &#39;y2&#39;); INSERT INTO els (id, pid, name) VALUES (5, 3, &#39;y1&#39;); INSERT INTO els (id, pid, name) VALUES (6, 1, &#39;x3&#39;); INSERT INTO els (id, pid, name) VALUES (7, 6, &#39;w2&#39;); INSERT INTO els (id, pid, name) VALUES (8, 6, &#39;w1&#39;); INSERT INTO els (id, pid, name) VALUES (9, 7, &#39;z1&#39;); INSERT INTO els (id, pid, name) VALUES (10, 7, &#39;z2&#39;);  Tree</description>
+      <description>&lt;p&gt;SQLite is wonderful!&lt;/p&gt;
+
+&lt;p&gt;Just today I found that SQLite support queries with a recurse to get the inner sub-trees:
+&lt;/p&gt;</description>
     </item>
     
   </channel>

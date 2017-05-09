@@ -122,9 +122,10 @@ Few weeks ago I was looking for approach to convert an pdf document to a image w
 
     <span class="post-date">Fri, Jun 3, 2016</span>
 
-    SQLite is wonderful!
-Just today I found that SQLite support queries with a recurse to get the inner sub-trees:
-CREATE TABLE els ( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE ,pid INTEGER DEFAULT NULL REFERENCES els ,name TEXT ); INSERT INTO els (id, pid, name) VALUES (1, NULL, 'top'); INSERT INTO els (id, pid, name) VALUES (2, 1, 'x2'); INSERT INTO els (id, pid, name) VALUES (3, 1, 'x1'); INSERT INTO els (id, pid, name) VALUES (4, 3, 'y2'); INSERT INTO els (id, pid, name) VALUES (5, 3, 'y1'); INSERT INTO els (id, pid, name) VALUES (6, 1, 'x3'); INSERT INTO els (id, pid, name) VALUES (7, 6, 'w2'); INSERT INTO els (id, pid, name) VALUES (8, 6, 'w1'); INSERT INTO els (id, pid, name) VALUES (9, 7, 'z1'); INSERT INTO els (id, pid, name) VALUES (10, 7, 'z2');  Tree
+    <p>SQLite is wonderful!</p>
+
+<p>Just today I found that SQLite support queries with a recurse to get the inner sub-trees:
+</p>
   </div>
     
     <div class="read-more-link">
