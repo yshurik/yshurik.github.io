@@ -1,88 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on YSHURIK</title>
-    <link>https://yshurik.github.io/tags/</link>
-    <description>Recent content in Tags on YSHURIK</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>yshurik</copyright>
-    <lastBuildDate>Fri, 03 Jun 2016 22:13:05 +0200</lastBuildDate>
-    
-	<atom:link href="https://yshurik.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Blog</title>
-      <link>https://yshurik.github.io/tags/blog/</link>
-      <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development</title>
-      <link>https://yshurik.github.io/tags/development/</link>
-      <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ideas</title>
-      <link>https://yshurik.github.io/tags/ideas/</link>
-      <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/ideas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Misc</title>
-      <link>https://yshurik.github.io/tags/misc/</link>
-      <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/misc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pdf.Js</title>
-      <link>https://yshurik.github.io/tags/pdf.js/</link>
-      <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/pdf.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Qt</title>
-      <link>https://yshurik.github.io/tags/qt/</link>
-      <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/qt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Research</title>
-      <link>https://yshurik.github.io/tags/research/</link>
-      <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sqlite</title>
-      <link>https://yshurik.github.io/tags/sqlite/</link>
-      <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/tags/sqlite/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Blog</title>
+        <link>https://yshurik.github.io/tags/</link>
+        <description>Tags - Tag - Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</lastBuildDate><atom:link href="https://yshurik.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Development</title>
+    <link>https://yshurik.github.io/tags/development/</link>
+    <pubDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/development/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>pdf.js</title>
+    <link>https://yshurik.github.io/tags/pdf.js/</link>
+    <pubDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/pdf.js/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>qt</title>
+    <link>https://yshurik.github.io/tags/qt/</link>
+    <pubDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/qt/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Blog</title>
+    <link>https://yshurik.github.io/tags/blog/</link>
+    <pubDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/blog/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Ideas</title>
+    <link>https://yshurik.github.io/tags/ideas/</link>
+    <pubDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/ideas/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Misc</title>
+    <link>https://yshurik.github.io/tags/misc/</link>
+    <pubDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/misc/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Research</title>
+    <link>https://yshurik.github.io/tags/research/</link>
+    <pubDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/research/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>SQLite</title>
+    <link>https://yshurik.github.io/tags/sqlite/</link>
+    <pubDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/tags/sqlite/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

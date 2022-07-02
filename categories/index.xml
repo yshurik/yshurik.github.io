@@ -1,51 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on YSHURIK</title>
-    <link>https://yshurik.github.io/categories/</link>
-    <description>Recent content in Categories on YSHURIK</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>yshurik</copyright>
-    
-	<atom:link href="https://yshurik.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Development</title>
-      <link>https://yshurik.github.io/categories/development/</link>
-      <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/categories/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pdf.Js</title>
-      <link>https://yshurik.github.io/categories/pdf.js/</link>
-      <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/categories/pdf.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Qt</title>
-      <link>https://yshurik.github.io/categories/qt/</link>
-      <pubDate>Thu, 27 Apr 2017 20:05:44 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/categories/qt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sql</title>
-      <link>https://yshurik.github.io/categories/sql/</link>
-      <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/categories/sql/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Blog</title>
+        <link>https://yshurik.github.io/categories/</link>
+        <description>Categories - Category - Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</lastBuildDate><atom:link href="https://yshurik.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Development</title>
+    <link>https://yshurik.github.io/categories/development/</link>
+    <pubDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/categories/development/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>PDF.js</title>
+    <link>https://yshurik.github.io/categories/pdf.js/</link>
+    <pubDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/categories/pdf.js/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Qt</title>
+    <link>https://yshurik.github.io/categories/qt/</link>
+    <pubDate>Thu, 27 Apr 2017 20:05:44 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/categories/qt/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>SQL</title>
+    <link>https://yshurik.github.io/categories/sql/</link>
+    <pubDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/categories/sql/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on YSHURIK</title>
+    <title>Posts on Blog</title>
     <link>https://yshurik.github.io/post/</link>
-    <description>Recent content in Posts on YSHURIK</description>
+    <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>yshurik</copyright>
-    <lastBuildDate>Thu, 27 Apr 2017 20:05:44 +0200</lastBuildDate>
-    
-	<atom:link href="https://yshurik.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 27 Apr 2017 20:05:44 +0200</lastBuildDate><atom:link href="https://yshurik.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create QPdfJs</title>
       <link>https://yshurik.github.io/post/create-qpdfjs/</link>
@@ -30,9 +25,7 @@ Few weeks ago I was looking for approach to convert an pdf document to a image w
       
       <guid>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</guid>
       <description>&lt;p&gt;SQLite is wonderful!&lt;/p&gt;
-
-&lt;p&gt;Just today I found that SQLite support queries with a recurse to get the inner sub-trees:
-&lt;/p&gt;</description>
+&lt;p&gt;Just today I found that SQLite support queries with a recurse to get the inner sub-trees:&lt;/p&gt;</description>
     </item>
     
   </channel>

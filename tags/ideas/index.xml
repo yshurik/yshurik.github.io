@@ -1,28 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ideas on YSHURIK</title>
-    <link>https://yshurik.github.io/tags/ideas/</link>
-    <description>Recent content in Ideas on YSHURIK</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>yshurik</copyright>
-    <lastBuildDate>Fri, 03 Jun 2016 22:13:05 +0200</lastBuildDate>
-    
-	<atom:link href="https://yshurik.github.io/tags/ideas/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>SQLite tree structures and queries to get sub-trees</title>
-      <link>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</link>
-      <pubDate>Fri, 03 Jun 2016 22:13:05 +0200</pubDate>
-      
-      <guid>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</guid>
-      <description>&lt;p&gt;SQLite is wonderful!&lt;/p&gt;
-
-&lt;p&gt;Just today I found that SQLite support queries with a recurse to get the inner sub-trees:
-&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ideas - Tag - Blog</title>
+        <link>https://yshurik.github.io/tags/ideas/</link>
+        <description>Ideas - Tag - Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</lastBuildDate><atom:link href="https://yshurik.github.io/tags/ideas/" rel="self" type="application/rss+xml" /><item>
+    <title>SQLite tree structures and queries to get sub-trees</title>
+    <link>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</link>
+    <pubDate>Fri, 03 Jun 2016 22:13:05 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://yshurik.github.io/post/sqlite-tree-structures-and-queries-to-get-sub-trees/</guid>
+    <description><![CDATA[<p>SQLite is wonderful!</p>
+<p>Just today I found that SQLite support queries with a recurse to get the inner sub-trees:</p>]]></description>
+</item>
+</channel>
 </rss>
